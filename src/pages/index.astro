@@ -1,0 +1,244 @@
+---
+import "../styles/global.css";
+
+const services = [
+  {
+    title: "Contratos empresariais",
+    text: "Elaboração, revisão e negociação de instrumentos para relações comerciais mais claras, executáveis e alinhadas ao risco do negócio.",
+  },
+  {
+    title: "Contratos cíveis",
+    text: "Apoio jurídico para documentos particulares, prestação de serviços, acordos, distratos e outras relações patrimoniais.",
+  },
+  {
+    title: "Consultivo jurídico",
+    text: "Orientação preventiva para empresas que precisam tomar decisões com segurança antes de formalizar obrigações.",
+  },
+  {
+    title: "Contencioso estratégico",
+    text: "Atuação em demandas consumeristas em prol do fornecedor, com experiência no segmento automotivo.",
+  },
+];
+
+const process = [
+  "Diagnóstico da necessidade contratual e dos pontos de risco.",
+  "Estruturação ou revisão do documento com linguagem objetiva.",
+  "Acompanhamento da negociação até a assinatura ou formalização.",
+];
+
+const faqs = [
+  {
+    question: "Quando vale revisar um contrato antes da assinatura?",
+    answer: "Sempre que o documento envolver obrigações relevantes, prazos, pagamentos, multas, exclusividade, confidencialidade ou riscos operacionais para a empresa.",
+  },
+  {
+    question: "A atuação é apenas para empresas?",
+    answer: "O foco principal é contratos cíveis e empresariais, mas demandas contratuais de pessoas físicas também podem ser avaliadas conforme o caso.",
+  },
+  {
+    question: "O atendimento pode ser remoto?",
+    answer: "Sim. A primeira avaliação e a condução dos documentos podem ocorrer de forma remota, com comunicação objetiva e organizada.",
+  },
+];
+---
+
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Advocacia consultiva em contratos cíveis e empresariais, com foco em segurança jurídica, clareza documental e prevenção de riscos." />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Renata Picanço | Advocacia Contratual Empresarial</title>
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#inicio" aria-label="Renata Picanço">
+        <span class="brand-mark">RP</span>
+        <span>
+          <strong>Renata Picanço</strong>
+          <small>Advocacia contratual</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" data-nav-toggle>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav" data-nav>
+        <a href="#atuacao">Atuação</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#metodo">Método</a>
+        <a href="#duvidas">Dúvidas</a>
+        <a class="nav-cta" href="#contato" aria-label="Ir para contato">
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5" /></svg>
+          Contato
+        </a>
+      </nav>
+    </header>
+
+    <main id="inicio">
+      <section class="hero">
+        <div class="hero-media" aria-hidden="true">
+          <img src="/images/hero-contracts.png" alt="" loading="eager" />
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+          <p class="eyebrow">Contratos cíveis e empresariais</p>
+          <h1>Advocacia consultiva para formalizar negócios com clareza e segurança.</h1>
+          <p class="hero-copy">
+            Apoio jurídico na elaboração, revisão e negociação de contratos, com foco em prevenção de riscos, linguagem objetiva e aderência ao contexto empresarial.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#contato">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
+              Agendar avaliação
+            </a>
+            <a class="button secondary" href="#atuacao">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10" /></svg>
+              Ver áreas
+            </a>
+          </div>
+          <dl class="hero-stats" aria-label="Indicadores profissionais">
+            <div>
+              <dt>6 anos</dt>
+              <dd>de advocacia</dd>
+            </div>
+            <div>
+              <dt>Consultiva</dt>
+              <dd>pós-graduada</dd>
+            </div>
+            <div>
+              <dt>Empresarial</dt>
+              <dd>foco contratual</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="section intro-band">
+        <div class="container intro-grid">
+          <p class="section-kicker">Advocacia preventiva</p>
+          <h2>Contratos bem estruturados reduzem dúvida, conflito e custo futuro.</h2>
+          <p>
+            A atuação combina experiência com contratos cíveis e empresariais, departamento jurídico interno e recuperação de crédito bancário para construir documentos juridicamente consistentes e comercialmente utilizáveis.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="atuacao">
+        <div class="container section-heading">
+          <p class="section-kicker">Áreas de atuação</p>
+          <h2>Suporte jurídico para relações contratuais que precisam funcionar na prática.</h2>
+        </div>
+        <div class="container services-grid">
+          {services.map((service) => (
+            <article class="service-card">
+              <span class="card-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M8 7h8M8 12h8M8 17h5" /><path d="M6 3h9l3 3v15H6z" /></svg>
+              </span>
+              <h3>{service.title}</h3>
+              <p>{service.text}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="section muted" id="sobre">
+        <div class="container about-grid">
+          <div>
+            <p class="section-kicker">Sobre Renata Picanço</p>
+            <h2>A paixão pela advocacia virou uma prática voltada a clareza, estratégia e prevenção.</h2>
+          </div>
+          <div class="about-copy">
+            <p>
+              A advocacia é uma paixão desde o início de sua formação como bacharel em Direito. Hoje, Renata Picanço atua há 6 anos como advogada, é pós-graduada em advocacia consultiva e pós-graduanda em processo civil.
+            </p>
+            <p>
+              Sua experiência passa por contratos cíveis e empresariais, departamento jurídico interno e recuperação de crédito bancário. Como associada, atua no contencioso consumerista em prol do fornecedor, especialmente no segmento automotivo de compra e venda de automóveis.
+            </p>
+            <p>
+              Em sua atuação autônoma, atende demandas contratuais cíveis e empresariais, com olhar preventivo e linguagem acessível para decisores.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="metodo">
+        <div class="container method-grid">
+          <div class="method-copy">
+            <p class="section-kicker">Método de trabalho</p>
+            <h2>Uma condução objetiva para transformar necessidades comerciais em documentos seguros.</h2>
+            <p>
+              Cada contrato é tratado como uma ferramenta de gestão: precisa refletir o negócio, antecipar cenários sensíveis e permitir execução sem ambiguidades.
+            </p>
+          </div>
+          <ol class="process-list">
+            {process.map((item, index) => (
+              <li>
+                <span>{String(index + 1).padStart(2, "0")}</span>
+                <p>{item}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
+      <section class="section faq-section" id="duvidas">
+        <div class="container faq-grid">
+          <div>
+            <p class="section-kicker">Dúvidas frequentes</p>
+            <h2>Perguntas iniciais antes de contratar apoio contratual.</h2>
+          </div>
+          <div class="faq-list">
+            {faqs.map((faq) => (
+              <details>
+                <summary>{faq.question}</summary>
+                <p>{faq.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-section" id="contato">
+        <div class="container cta-content">
+          <p class="section-kicker">Contato</p>
+          <h2>Precisa elaborar, revisar ou negociar um contrato?</h2>
+          <p>
+            Envie uma mensagem com o contexto da demanda para uma avaliação inicial e definição dos próximos passos.
+          </p>
+          <a class="button primary light" href="mailto:contato@renatapicanco.com.br">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M4 4h16v16H4z" /><path d="m4 7 8 6 8-6" /></svg>
+            contato@renatapicanco.com.br
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <p>© {new Date().getFullYear()} Renata Picanço. Todos os direitos reservados.</p>
+        <a href="#inicio">Voltar ao topo</a>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.querySelector("[data-nav-toggle]");
+      const nav = document.querySelector("[data-nav]");
+
+      toggle?.addEventListener("click", () => {
+        const isOpen = toggle.getAttribute("aria-expanded") === "true";
+        toggle.setAttribute("aria-expanded", String(!isOpen));
+        nav?.classList.toggle("is-open", !isOpen);
+      });
+
+      nav?.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          toggle?.setAttribute("aria-expanded", "false");
+          nav.classList.remove("is-open");
+        });
+      });
+    </script>
+  </body>
+</html>
